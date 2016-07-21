@@ -30,5 +30,7 @@ public class Solution {
             this.strength = strength;
         }
         //test qweqwe
+        //check #2
+        //asd
     }
 }
