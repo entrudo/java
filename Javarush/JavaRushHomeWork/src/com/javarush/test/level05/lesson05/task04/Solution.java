@@ -29,5 +29,6 @@ public class Solution {
             this.weight = weight;
             this.strength = strength;
         }
+        //test qweqwe
     }
 }
