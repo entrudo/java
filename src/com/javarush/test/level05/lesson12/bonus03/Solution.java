@@ -1,6 +1,7 @@
 package com.javarush.test.level05.lesson12.bonus03;
 
 import java.io.*;
+import java.util.Scanner;
 
 /* Задача по алгоритмам
 Написать программу, которая:
@@ -13,14 +14,35 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        //BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int maximum = 0;
-
         //напишите тут ваш код
-
-
-
-
+        //Читаем числа с клавиатуры
+        Scanner cr = new Scanner(System.in);
+        //Ввод количество чиссел
+        System.out.println("Введите число N");
+        int size = cr.nextInt();
+        if (size>0){
+        //Объявляем массив
+        int arr [] = new int[size];
+        // Заполняем массив
+        System.out.println("Введите числа на длину числа N");
+        for (int i =0; i<arr.length; i++){
+            arr[i] = cr.nextInt();
+        }
+        //Обозначаем стартовый максимальный элемент
+        maximum = arr[0];
+        //Ищем минимальное значение
+        for (int i =0; i<arr.length; i++){
+            if (maximum<arr[i]){
+                maximum=arr[i];
+            }
+        }
+        //Выводим максимальное значение из 5 цифр
         System.out.println(maximum);
+        }else {
+            System.out.println("Вы введи число меньше или рано 0");
+        }
+
     }
 }
