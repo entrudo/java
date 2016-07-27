@@ -14,11 +14,30 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
-        //BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int maximum = 0;
         //напишите тут ваш код
-        //Читаем числа с клавиатуры
-        Scanner cr = new Scanner(System.in);
+        int N = Integer.parseInt(reader.readLine());
+        if (N>0){
+            for (int i=0; i<N; i++){
+                int n = Integer.parseInt(reader.readLine());
+                if (i == 0){
+                    maximum=n;
+                }else {
+                if (n>maximum){
+                    maximum=n;
+                }}
+            }
+            System.out.println(maximum);
+        }
+
+
+
+
+
+
+
+        /*Scanner cr = new Scanner(System.in);
         //Ввод количество чиссел
         System.out.println("Введите число N");
         int size = cr.nextInt();
@@ -42,7 +61,7 @@ public class Solution
         System.out.println(maximum);
         }else {
             System.out.println("Вы введи число меньше или рано 0");
-        }
+        }*/
 
     }
 }
