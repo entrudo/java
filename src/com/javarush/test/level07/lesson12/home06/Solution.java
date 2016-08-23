@@ -1,7 +1,8 @@
 package com.javarush.test.level07.lesson12.home06;
 
 /* Семья
-Создай класс Human с полями имя(String), пол(boolean),возраст(int), отец(Human), мать(Human). Создай объекты и заполни их так, чтобы получилось:
+Создай класс Human с полями имя(String), пол(boolean),возраст(int), отец(Human), мать(Human).
+Создай объекты и заполни их так, чтобы получилось:
 Два дедушки, две бабушки, отец, мать, трое детей. Вывести объекты на экран.
 Примечание:
 Если написать свой метод String toString() в классе Human, то именно он будет использоваться при выводе объекта на экран.
@@ -17,8 +18,25 @@ public class Solution
     public static void main(String[] args)
     {
         //напишите тут ваш код
-        Human human = new Human();
-        System.out.println(human.toString("An", false, 25));
+        Human ded1 = new Human("Oleg", true, 70, null, null);
+        Human ded2 = new Human("Ivan", true, 69, null, null);
+        Human babka1 = new Human("Olga", false, 71, null, null);
+        Human babka2 = new Human("Ivana", false, 68, null, null);
+        Human otec = new Human("Igor", true, 40, ded1, babka1);
+        Human mat = new Human("Inna", false, 38, ded2, babka2);
+        Human child1 = new Human("Kira", false, 7, otec, mat);
+        Human child2 = new Human("Kir", false, 8, otec, mat);
+        Human child3 = new Human("Kra", false, 5, otec, mat);
+
+        System.out.println(ded1.toString());
+        System.out.println(ded2.toString());
+        System.out.println(babka1.toString());
+        System.out.println(babka2.toString());
+        System.out.println(otec.toString());
+        System.out.println(mat.toString());
+        System.out.println(child1.toString());
+        System.out.println(child2.toString());
+        System.out.println(child3.toString());
     }
 
 
@@ -29,29 +47,19 @@ public class Solution
         private String name;
         private boolean sex;
         private int age;
-        private father father = new father();
-        private father mother = new father();
+        private Human father;
+        private Human mother;
 
-
-        public static class father{
-            private String name;
-
-            public void father(String name){
-                this.name = name;
-            }
-        }
-
-        public static class mother{
-            private String name;
-
-            public void mother(String name){
-                this.name = name;
-            }
+        Human(String name, boolean sex, int age, Human father, Human mother){
+            this.name = name;
+            this.sex = sex;
+            this.age = age;
+            this.father = father;
+            this.mother = mother;
         }
 
 
-        @Override
-        public String toString(String name, boolean sex, int age)
+        public String toString()
         {
             String text = "";
             text += "Имя: " + this.name;
