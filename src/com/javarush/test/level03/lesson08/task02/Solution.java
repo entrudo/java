@@ -20,7 +20,5 @@ public class Solution
        String sNum2 = read.readLine();
        int iNum2 = Integer.parseInt(sNum2);
        System.out.println(nam + " получает " + iNum1 + " через "+ iNum2 + " лет.");
-
-
     }
 }
