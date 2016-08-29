@@ -27,5 +27,6 @@ public class Solution
         for (int i = 9; i >= 0; i--){
             System.out.println(list.get(i));
         }
+
     }
 }
