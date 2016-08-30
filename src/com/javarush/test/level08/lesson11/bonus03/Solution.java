@@ -29,6 +29,16 @@ public class Solution
     public static void sort(String[] array)
     {
         //напишите тут ваш код
+        String temp = "";
+        for (int j = array.length; j > 0; j--) {
+            for (int i = 0; i < array.length - 1; i++) {
+                if (isGreaterThan(array[i], array[i + 1])) {
+                    temp = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = temp;
+                }
+            }
+        }
     }
 
     //Метод для сравнения строк: 'а' больше чем 'b'
