@@ -45,9 +45,9 @@ public class Solution
             result.put(list.get(i), 0);
         }
 
-        for (int i = 0; i <list.size(); i++){
-            if (pair.)
-        }
+//        for (int i = 0; i <list.size(); i++){
+//            if (pair.)
+//        }
 
 
         return result;
