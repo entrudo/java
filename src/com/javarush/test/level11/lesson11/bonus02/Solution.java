@@ -10,27 +10,31 @@ public class Solution
     {
     }
 
-    public class King
+    public class chessFigure{
+
+    }
+
+    public class King extends chessFigure
     {
     }
 
-    public class Queen
+    public class Queen extends chessFigure
     {
     }
 
-    public class Rook
+    public class Rook extends chessFigure
     {
     }
 
-    public class Knight
+    public class Knight extends chessFigure
     {
     }
 
-    public class Bishop
+    public class Bishop extends chessFigure
     {
     }
 
-    public class Pawn
+    public class Pawn extends chessFigure
     {
     }
 }

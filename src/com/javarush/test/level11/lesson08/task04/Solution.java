@@ -1,7 +1,8 @@
 package com.javarush.test.level11.lesson08.task04;
 
 /* Инкапсуляция для классов Cat и Dog
-Скрыть все внутренние переменные класса Cat и Dog. Также скрыть все методы, кроме тех, с помощью которых эти классы взаимодействуют друг с другом.
+Скрыть все внутренние переменные класса Cat и Dog. Также скрыть все методы,
+кроме тех, с помощью которых эти классы взаимодействуют друг с другом.
 */
 
 public class Solution
@@ -17,8 +18,8 @@ public class Solution
 
     public static class Cat
     {
-        public String name;
-        public int speed;
+        private String name;
+        private int speed;
 
         public Cat(String name, int speed)
         {
@@ -26,12 +27,12 @@ public class Solution
             this.speed = speed;
         }
 
-        public String getName()
+        private String getName()
         {
             return name;
         }
 
-        public int getSpeed()
+        private int getSpeed()
         {
             return speed;
         }
@@ -44,8 +45,8 @@ public class Solution
 
     public static  class Dog
     {
-        public String name;
-        public int speed;
+        private String name;
+        private int speed;
 
         public Dog(String name, int speed)
         {
@@ -53,12 +54,12 @@ public class Solution
             this.speed = speed;
         }
 
-        public String getName()
+        private String getName()
         {
             return name;
         }
 
-        public int getSpeed()
+        private int getSpeed()
         {
             return speed;
         }
