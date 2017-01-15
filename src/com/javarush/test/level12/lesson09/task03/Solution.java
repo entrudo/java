@@ -27,19 +27,55 @@ public class Solution
         public void eat();
     }
 
-    public class Dog
+    public class Dog implements Eat, Move
     {
+        @Override
+        public void eat() {
+
+        }
+
+        @Override
+        public void move() {
+
+        }
     }
 
-    public class Duck
+    public class Duck implements Fly, Eat, Move
     {
+        @Override
+        public void fly() {
+
+        }
+
+        @Override
+        public void eat() {
+
+        }
+
+        @Override
+        public void move() {
+
+        }
     }
 
-    public class Car
+    public class Car implements Move
     {
+        @Override
+        public void move() {
+
+        }
     }
 
-    public class Airplane
+    public class Airplane implements Fly, Move
     {
+        @Override
+        public void fly() {
+
+        }
+
+        @Override
+        public void move() {
+
+        }
     }
 }

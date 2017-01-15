@@ -19,7 +19,13 @@ public class Solution
         public void workHard();
     }
 
-    public static class CTO  implements Businessman
+    public static class Director{
+        public void workHard(){
+
+        }
+    }
+
+    public static class CTO extends Director implements Businessman
     {
 
     }

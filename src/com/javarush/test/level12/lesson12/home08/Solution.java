@@ -33,7 +33,7 @@ public class Solution
         public void workVeryHard();
     }
 
-    public static class Human
+    public static class Human implements Worker, Businessman, Secretary, Miner
     {
 
         public void workHard()
@@ -42,6 +42,11 @@ public class Solution
 
         public void workLazy()
         {
+        }
+
+        @Override
+        public void workVeryHard() {
+
         }
     }
 }

@@ -13,4 +13,16 @@ public class Solution
     }
 
     //Напишите тут ваши методы
+
+    public static int max(int k, int i){
+        return k > i ? k : i;
+    }
+
+    public static long max(long k, long i){
+        return k > i ? k : i;
+    }
+
+    public static double max(double k, double i){
+        return k > i ? k : i;
+    }
 }

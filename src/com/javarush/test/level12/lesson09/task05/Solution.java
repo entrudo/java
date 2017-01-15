@@ -15,4 +15,15 @@ public class Solution
     }
 
     //add public interfaces and public class here - добавь public интерфейсы и public класс тут
+    interface Run {
+        public void run();
+    }
+
+    interface Swim {
+        public void run();
+    }
+
+    public abstract class Human implements Swim, Run {
+
+    }
 }

@@ -11,5 +11,13 @@ public class Solution
 
     }
 
+    public static void print(int i){
+
+    }
+
+    public static void print(String str){
+
+    }
+
     //Напишите тут ваши методы
 }

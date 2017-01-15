@@ -23,6 +23,26 @@ public class Solution
     {
         //напишите тут ваш код
 
+        if (o.getClass().equals(new Cat().getClass())){
+            return "Кот";
+        }
+
+        if (o.getClass().equals(new Tiger().getClass())){
+            return "Тигр";
+        }
+
+        if (o.getClass().equals(new Lion().getClass())){
+            return "Лев";
+        }
+
+        if (o instanceof Bull){
+            return "Бык";
+        }
+
+        if (o instanceof Cow){
+            return "Корова";
+        }
+
         return "Животное";
     }
 

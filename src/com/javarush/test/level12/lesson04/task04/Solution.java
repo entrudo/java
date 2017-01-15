@@ -13,4 +13,15 @@ public class Solution
     }
 
     //Напишите тут ваши методы
+    public static int min(int k, int i){
+        return k < i ? k : i;
+    }
+
+    public static long min(long k, long i){
+        return k < i ? k : i;
+    }
+
+    public static double min(double k, double i){
+        return k < i ? k : i;
+    }
 }

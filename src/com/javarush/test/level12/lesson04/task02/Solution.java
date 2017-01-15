@@ -9,8 +9,18 @@ public class Solution
 {
     public static void main(String[] args)
     {
+        Integer k = 10;
+        print(k);
+        print(k);
 
     }
 
     //Напишите тут ваши методы
+    public static void print(int i){
+
+    }
+
+    public static void print(Integer i){
+
+    }
 }

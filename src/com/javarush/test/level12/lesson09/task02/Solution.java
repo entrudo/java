@@ -14,4 +14,16 @@ public class Solution
 
 //add interfaces here - добавь интерфейсы тут
 
+    public interface Fly{
+        public void move();
+    }
+
+    public interface Run{
+        public void move();
+    }
+
+    public interface Swim{
+        public void move();
+    }
+
 }

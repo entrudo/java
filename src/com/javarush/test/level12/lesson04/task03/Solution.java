@@ -12,4 +12,10 @@ public class Solution
     }
 
     //Напишите тут ваши методы
+
+    public static void print(int i){}
+    public static void print(String str){}
+    public static void print(Long k){}
+    public static void print(Character d){}
+    public static void print(float l){}
 }

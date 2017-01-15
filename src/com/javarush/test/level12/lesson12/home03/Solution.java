@@ -36,6 +36,8 @@ public class Solution
 
     public static class Cat extends Pet
     {
-
+        public void setName(String name){
+            this.name = "";
+        }
     }
 }

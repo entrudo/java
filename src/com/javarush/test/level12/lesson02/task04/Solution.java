@@ -18,6 +18,21 @@ public class Solution
     public static void printObjectType(Object o)
     {
       //Напишите тут ваше решение
+        if (o instanceof Cat){
+            System.out.println("Кошка");
+        }
+
+        if (o instanceof Bird){
+            System.out.println("Птица");
+        }
+
+        if (o instanceof Lamp){
+            System.out.println("Лампа");
+        }
+
+        if (o instanceof Dog){
+            System.out.println("Собака");
+        }
     }
 
     public static class Cat
