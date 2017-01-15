@@ -23,17 +23,19 @@ public class Solution
 
     interface DBObject
     {
-        DBObject initializeIdAndName(long id, String name) {
-            this.id = id;
-            this.name = name;
-            return this;
-        }
+
     }
 
     static class User implements DBObject
     {
         long id;
         String name;
+
+        DBObject initializeIdAndName(long id, String name) {
+            this.id = id;
+            this.name = name;
+            return this;
+        }
 
         @Override
         public String toString()
