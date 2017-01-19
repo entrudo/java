@@ -6,10 +6,24 @@ package com.javarush.test.level13.lesson11.home03;
 3. Не забыть освободить ресурсы. Закрыть поток чтения с файла и поток ввода с клавиатуры.
 */
 
+import java.io.*;
+
 public class Solution
 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws IOException {
         //add your code here
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        String nameOfFile = reader.readLine();
+
+        InputStream inputStream = new FileInputStream(nameOfFile);
+
+        while (inputStream.available() > 0){
+            int data = inputStream.read();
+            System.out.print((char) data);
+        }
+
+        inputStream.close();
+
     }
 }

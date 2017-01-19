@@ -6,9 +6,29 @@ package com.javarush.test.level13.lesson11.home04;
 3. Вывести абсолютно все введенные строки в файл, каждую строчку с новой стороки.
 */
 
+import java.io.*;
+
 public class Solution
 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter write = new BufferedWriter(new OutputStreamWriter(new FileOutputStream
+                (reader.readLine())));
+
+//        OutputStream outputStream = new FileOutputStream("Documents/Projects/java/Hello.txt");
+
+        while (true){
+            String str = reader.readLine();
+            if (str.equals("exit")){
+                write.write(str);
+                write.newLine();
+                write.close();
+                return;
+
+            }
+            write.write(str);
+            write.newLine();
+        }
+
     }
 }
