@@ -14,7 +14,6 @@ public class Solution
         System.out.println(Matrix.NEO);
     }
 
-
     static class Matrix
     {
        public static DBObject NEO = new User().initializeIdAndName(1, "Neo");
@@ -38,7 +37,9 @@ public class Solution
 
         @Override
         public DBObject initializeIdAndName(long id, String name) {
-            return this.initializeIdAndName(id, name);
+            this.id = id;
+            this.name = name;
+            return this;
         }
     }
 
