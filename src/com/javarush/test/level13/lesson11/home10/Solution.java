@@ -10,28 +10,36 @@ import java.awt.*;
 public class Solution
 {
 
-//    public static void main(String[] args) throws Exception
-//    {
-//       Fox bigFox = new BigFox();
-//       System.out.println(bigFox.getName());
-//       System.out.println(bigFox.getColor());
-//    }
-//
-//    public interface Animal
-//    {
-//        Color getColor();
-//    }
-//
-//      public static class Fox implements Animal
-//      {
-//          public String getName() {
-//              return "Fox";
-//          }
-//      }
-//
-//    public abstract static class BigFox
-//    {
-//
-//    }
+    public static void main(String[] args) throws Exception
+    {
+       Fox bigFox = new BigFox();
+       System.out.println(bigFox.getName());
+       System.out.println(bigFox.getColor());
+    }
+
+    public interface Animal
+    {
+        Color getColor();
+    }
+
+      public abstract static class Fox implements Animal
+      {
+          public String getName() {
+              return "Fox";
+          }
+
+      }
+
+    public static class BigFox extends Fox
+    {
+	    public String getname(){
+    		return "Fox";
+	    }
+	
+	    @Override
+	    public Color getColor() {
+		    return Color.DARK_GRAY;
+	    }
+    }
 
 }

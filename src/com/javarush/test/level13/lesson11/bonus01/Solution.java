@@ -17,10 +17,34 @@ package com.javarush.test.level13.lesson11.bonus01;
 10
 */
 
+import java.io.*;
+import java.util.Arrays;
+
 public class Solution
 {
-    public static void main(String[] args)
+    public static void main(String[] args) throws IOException
     {
         // напишите тут ваш код
+	    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+	    BufferedReader readerFile = new BufferedReader(new FileReader(reader.readLine()));
+	    
+	    int[] array = new int[3];
+	    int count = 0;
+	    String temp;
+	    
+	    while ((temp = readerFile.readLine()) != null){
+	    	if (Integer.parseInt(temp) % 2 == 0){
+			    array[count] = Integer.parseInt(temp);
+			    count++;
+	    	}
+	    }
+	
+	    Arrays.sort(array);
+	    
+	    for (int i : array){
+		    System.out.println(i);
+	    }
+	    
+	    
     }
 }
