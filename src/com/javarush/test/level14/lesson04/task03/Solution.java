@@ -11,36 +11,44 @@ package com.javarush.test.level14.lesson04.task03;
 
 public class Solution
 {
-//    public static void main(String[] args)
-//    {
-//        Food food = new Food();
-//        Selectable selectable = new Food();
-//        Food newFood = (Food) selectable;
-//
-//        foodMethods(food);
-//        selectableMethods(selectable);
-//    }
-//
-//    public static void foodMethods(Food food)
-//    {
-//        //тут добавьте вызов методов для переменной food
-//    }
-//
-//    public static void selectableMethods(Selectable selectable)
-//    {
-//        //тут добавьте вызов методов для переменной selectable
-//    }
-//
-//    interface Selectable
-//    {
-//        void onSelect();
-//    }
-//
-//    static class Food
-//    {
-//        public void eat()
-//        {
-//            System.out.println("food is eaten");
-//        }
-//    }
+    public static void main(String[] args)
+    {
+        Food food = new Food();
+        Selectable selectable = new Food();
+        Food newFood = (Food) selectable;
+
+        foodMethods(food);
+        selectableMethods(selectable);
+    }
+
+    public static void foodMethods(Food food)
+    {
+        //тут добавьте вызов методов для переменной food
+        food.eat();
+        food.onSelect();
+    }
+
+    public static void selectableMethods(Selectable selectable)
+    {
+        //тут добавьте вызов методов для переменной selectable
+        selectable.onSelect();
+    }
+
+    interface Selectable
+    {
+        void onSelect();
+    }
+
+    static class Food implements Selectable
+    {
+        public void eat()
+        {
+            System.out.println("food is eaten");
+        }
+        
+        @Override
+        public void onSelect(){
+            System.out.println("food is selected");
+        }
+    }
 }

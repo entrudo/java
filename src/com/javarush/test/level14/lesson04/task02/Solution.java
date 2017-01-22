@@ -1,9 +1,7 @@
 package com.javarush.test.level14.lesson04.task02;
 
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
-/* Коты
+import java.io.InputStreamReader;/* Коты
 1. Считывать строки(параметры) с консоли, пока пользователь не введет пустую строку(Enter).
 2. Каждый параметр соответствует имени кота.
 Для каждого параметра:
@@ -13,9 +11,20 @@ import java.io.InputStreamReader;
 
 public class Solution
 {
-    public static void main(String[] args) throws Exception
-    {
+    public static void main(String[] args) throws Exception {
         //Add your code here
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    
+        String name;
+        Cat cat = null;
+        
+        while (true) {
+            if ((name = reader.readLine()).equals("")){
+                return;
+            }
+            cat = CatFactory.getCatByKey(name);
+            System.out.println(cat.toString());
+        }
     }
 
     static class CatFactory
