@@ -2,8 +2,12 @@ package com.javarush.test.level14.lesson08.home09;
 
 public abstract class Money
 {
-    public Money(double amount)
+    private double money;
+
+    public double Money(double amount)
     {
+        this.money = amount;
+        return money;
     }
 
     public abstract double getAmount();

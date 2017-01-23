@@ -28,16 +28,58 @@ public class Solution
         String key = null;
 
         //тут цикл по чтению ключей, пункт 1
-        {
+        while (true){
+            key = reader.readLine();
+            if (!checkString(key)){
+                return;
+            }
         //создаем объект, пункт 2
-
+        if (key.equals("user")){
+            person = new Person.User();
+        }
+        if (key.equals("looser")){
+            person = new Person.Looser();
+        }
+        if (key.equals("coder")){
+            person = new Person.Coder();
+        }
+        if (key.equals("proger")){
+            person = new Person.Proger();
+        }
         doWork(person); //вызываем doWork
-
         }
     }
 
     public static void doWork(Person person)
     {
         // пункт 3
+        if (person instanceof Person.User){
+            ((Person.User) person).live();
+        }
+        if (person instanceof Person.Looser){
+            ((Person.Looser) person).doNothing();
+        }
+        if (person instanceof  Person.Coder){
+            ((Person.Coder) person).coding();
+        }
+        if (person instanceof Person.Proger){
+            ((Person.Proger) person).enjoy();
+        }
+    }
+
+    public static boolean checkString(String str){
+        if (str.equals("user") ){
+            return true;
+        }
+        if (str.equals("looser") ){
+            return true;
+        }
+        if (str.equals("coder")){
+            return true;
+        }
+        if (str.equals("proger")){
+            return true;
+        }
+        return false;
     }
 }
