@@ -1,5 +1,7 @@
 package com.javarush.test.level14.lesson08.bonus01;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +36,25 @@ public class Solution
         }
 
         //Add your code here
+        try {
+            double d = Double.parseDouble("qwe");
+        } catch (Exception e){
+            exceptions.add(e);
+        }
+
+        try {
+            int[] array = new int[1];
+            int temp = array[2];
+        } catch (Exception e){
+            exceptions.add(e);
+        }
+
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("test.txt"));
+        } catch (Exception e){
+            exceptions.add(e);
+        }
+
 
     }
 }
