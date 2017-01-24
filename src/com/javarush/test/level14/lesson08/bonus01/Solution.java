@@ -55,6 +55,45 @@ public class Solution
             exceptions.add(e);
         }
 
+        try {
+            Object szStr[] = new String[10];
+            szStr[0] = new Character('*');
+        } catch (Exception e){
+            exceptions.add(e);
+        }
+
+        try {
+            Object ch = new Character('*');
+            System.out.println((Byte)ch);
+        } catch (Exception e){
+            exceptions.add(e);
+        }
+
+        try {
+            int[] nNegArray = new int[-5];
+        } catch (Exception e){
+            exceptions.add(e);
+        }
+
+        try {
+            String szShortString = "123";
+            char chr = szShortString.charAt(10);
+        } catch (Exception e){
+            exceptions.add(e);
+        }
+
+        try {
+            throw new IllegalArgumentException();
+        } catch (Exception e){
+            exceptions.add(e);
+        }
+
+        try {
+            throw new IllegalMonitorStateException();
+        } catch (Exception e){
+            exceptions.add(e);
+        }
+
 
     }
 }
