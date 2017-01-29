@@ -12,12 +12,12 @@ package com.javarush.test.level15.lesson12.home04;
 */
 
 public class Solution {
-    public static Planet thePlanet;
-
-    //add static block here - добавьте статический блок тут
-
-    public static void readKeyFromConsoleAndInitPlanet() {
-        // implement step #5 here - реализуйте задание №5 тут
-        thePlanet = Sun.getInstance();
-    }
+//    public static Planet thePlanet;
+//
+//    //add static block here - добавьте статический блок тут
+//
+//    public static void readKeyFromConsoleAndInitPlanet() {
+//        // implement step #5 here - реализуйте задание №5 тут
+//        thePlanet = Sun.getInstance();
+//    }
 }

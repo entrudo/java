@@ -18,6 +18,15 @@ public class Solution {
         Object getAllowedAction();
     }
 
-    public static class Clothes {
+    public static class Clothes implements Sellable, Discountable {
+        @java.lang.Override
+        public Object getAllowedAction(String name) {
+            return null;
+        }
+    
+        @java.lang.Override
+        public Object getAllowedAction() {
+            return null;
+        }
     }
 }
