@@ -38,6 +38,12 @@ public class Solution {
 
             String output = "output";
             //Add your code here
+            if (this instanceof MarkTwainBook){
+                output = markTwainOutput;
+            }
+            if (this instanceof AgathaChristieBook){
+                output = agathaChristieOutput;
+            }
 
             return output;
         }
@@ -48,37 +54,40 @@ public class Solution {
     }
     
     public static class MarkTwainBook extends Book {
+        private String name;
     
-        public MarkTwainBook(String author) {
-//            super("Mark Twain");
-            super(author);
+        public MarkTwainBook(String name) {
+            super("Mark Twain");
+            this.name = name;
         }
     
         @Override
-        public Book getBook() {
-            return null;
+        public MarkTwainBook getBook() {
+            return this;
         }
     
         @Override
         public String getName() {
-            return null;
+            return this.name;
         }
     }
     
     public static class AgathaChristieBook extends Book {
-        public AgathaChristieBook(String author) {
+        private String name;
+        
+        public AgathaChristieBook(String name) {
             super("Agatha Christie");
-//            super(author);
+            this.name = name;
         }
     
         @Override
-        public Book getBook() {
-            return null;
+        public AgathaChristieBook getBook() {
+            return this;
         }
     
         @Override
         public String getName() {
-            return null;
+            return this.name;
         }
     }
 }
