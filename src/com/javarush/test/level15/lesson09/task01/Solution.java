@@ -10,6 +10,14 @@ import java.util.Map;
 public class Solution {
     public static Map<Double, String> labels = new HashMap<Double, String>();
 
+    static {
+        labels.put(30.2, "One");
+        labels.put(31.3, "Two");
+        labels.put(32.4, "Three");
+        labels.put(33.5, "Four");
+        labels.put(34.6, "Five");
+    }
+
     public static void main(String[] args) {
         System.out.println(labels);
     }
